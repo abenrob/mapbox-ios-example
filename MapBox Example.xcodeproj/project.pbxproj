@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD1C81DD174301D400C2462B /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1C81DC174301D400C2462B /* CoreText.framework */; };
+		DD1C81DF174301D900C2462B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1C81DE174301D900C2462B /* OpenGLES.framework */; };
+		DD1C81E1174301E500C2462B /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1C81E0174301E500C2462B /* libstdc++.dylib */; };
 		DD3A27EE1582A0AB00DADEFF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3A27ED1582A0AB00DADEFF /* CoreLocation.framework */; };
 		DD76D72E152E47660065DBB2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC4BF10152E455500089409 /* libz.dylib */; };
 		DD97C05616485E83007C4652 /* libMapBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC4BEA3152E2FDE00089409 /* libMapBox.a */; };
@@ -60,6 +63,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD1C81DC174301D400C2462B /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		DD1C81DE174301D900C2462B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		DD1C81E0174301E500C2462B /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		DD3A27ED1582A0AB00DADEFF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DD96557015264A080008517A /* MapView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MapView.xcodeproj; path = "MapBox-iOS-SDK/MapView/MapView.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		DD9BFE27160140520011F174 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -102,11 +108,14 @@
 			files = (
 				DDEF3A321522813600DE6DB0 /* CoreGraphics.framework in Frameworks */,
 				DD3A27EE1582A0AB00DADEFF /* CoreLocation.framework in Frameworks */,
+				DD1C81DD174301D400C2462B /* CoreText.framework in Frameworks */,
 				DDEF3A301522813600DE6DB0 /* Foundation.framework in Frameworks */,
+				DD1C81DF174301D900C2462B /* OpenGLES.framework in Frameworks */,
 				DDEF3A6D1522847A00DE6DB0 /* QuartzCore.framework in Frameworks */,
 				DDEF3A2E1522813600DE6DB0 /* UIKit.framework in Frameworks */,
 				DD97C05616485E83007C4652 /* libMapBox.a in Frameworks */,
 				DDC4BF12152E457A00089409 /* libsqlite3.dylib in Frameworks */,
+				DD1C81E1174301E500C2462B /* libstdc++.dylib in Frameworks */,
 				DD76D72E152E47660065DBB2 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,10 +194,13 @@
 			children = (
 				DDEF3A311522813600DE6DB0 /* CoreGraphics.framework */,
 				DD3A27ED1582A0AB00DADEFF /* CoreLocation.framework */,
+				DD1C81DC174301D400C2462B /* CoreText.framework */,
 				DDEF3A2F1522813600DE6DB0 /* Foundation.framework */,
+				DD1C81DE174301D900C2462B /* OpenGLES.framework */,
 				DDEF3A6C1522847A00DE6DB0 /* QuartzCore.framework */,
 				DDEF3A2D1522813600DE6DB0 /* UIKit.framework */,
 				DDEF3A6E1522848500DE6DB0 /* libsqlite3.dylib */,
+				DD1C81E0174301E500C2462B /* libstdc++.dylib */,
 				DDC4BF10152E455500089409 /* libz.dylib */,
 			);
 			name = Frameworks;
@@ -379,7 +391,7 @@
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MapBox Example/MapBox Example-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MapBox-iOS-SDK/**";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MapBox-iOS-SDK/MapView/Map";
 				INFOPLIST_FILE = "MapBox Example/MapBox Example-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
@@ -448,7 +460,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MapBox Example/MapBox Example-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MapBox-iOS-SDK/**";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MapBox-iOS-SDK/MapView/Map";
 				INFOPLIST_FILE = "MapBox Example/MapBox Example-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
@@ -467,7 +479,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MapBox Example/MapBox Example-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MapBox-iOS-SDK/**";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MapBox-iOS-SDK/MapView/Map";
 				INFOPLIST_FILE = "MapBox Example/MapBox Example-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
